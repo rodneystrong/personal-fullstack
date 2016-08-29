@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/rodneystrong/personal-fullstack#readme",
   "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.0",
     "massive": "^2.5.0"
   }
 }
