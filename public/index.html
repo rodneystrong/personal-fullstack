@@ -13,6 +13,36 @@
 <body ng-controller="MainCtrl">
 {{whatevs}}
 
+<button ng-click="getNotes()" type="button" name="button" autofocus>CLICK ME MIKEEEY!!!</button>
+  <div class="grid-box">
+    <div ng-repeat="item in data" class="info">
+      <div>
+        <p>
+          <span class="item-label">ID:</span> <span ng-bind="item.id"></span>
+        </p>
+      </div>
+      <div>
+        <p>
+          <span class="item-label">Say my name say my naaaame:</span> <span ng-bind="item.note"></span>
+        </p>
+        <p>
+          <button ng-click="deleteData(item.id)" type="button" name="button">Kill this</button>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create the parameter of 'newInfo' here that will interface with the
+       method in the angular service (in this case, 'createData').  -->
+  <div>
+    <input ng-model="newInfo" type="text" name="name" value="" placeholder="name">
+  </div>
+  <div>
+    <input ng-model="newAge" type="text" name="age" value="" placeholder="age">
+  </div>
+    
+    <button ng-click="createNotes(newText)" type="button">Oh man use me!</button>
+
   <!-- Compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>

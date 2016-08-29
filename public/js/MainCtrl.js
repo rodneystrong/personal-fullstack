@@ -1,6 +1,6 @@
 angular
   .module('fullStack')
-  .controller('MainCtrl', function($scope) {
+  .controller('MainCtrl', function($scope, mainService) {
     $scope.whatevs = 'lel';
 
     //GET
