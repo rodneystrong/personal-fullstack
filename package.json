@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/rodneystrong/personal-fullstack/issues"
   },
-  "homepage": "https://github.com/rodneystrong/personal-fullstack#readme"
+  "homepage": "https://github.com/rodneystrong/personal-fullstack#readme",
+  "dependencies": {
+    "massive": "^2.5.0"
+  }
 }
