@@ -10,3 +10,12 @@ https://nodemailer.com/
 
 Send email using nodejs and express in 5 simple steps
 http://javascript.tutorialhorizon.com/2015/07/02/send-email-node-js-express/
+
+Install NGINX on Linode
+https://www.linode.com/docs/websites/lemp/lemp-server-on-ubuntu-16-04
+
+Install NodeJS on Linode
+https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04
+
+Install PostGreSQL on Linode
+https://www.linode.com/docs/databases/postgresql/use-postgresql-relational-databases-on-ubuntu-16-04
