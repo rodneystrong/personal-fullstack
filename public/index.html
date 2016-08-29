@@ -35,12 +35,10 @@
   <!-- Create the parameter of 'newInfo' here that will interface with the
        method in the angular service (in this case, 'createData').  -->
   <div>
-    <input ng-model="newInfo" type="text" name="name" value="" placeholder="name">
+    <!-- <input ng-model="newText" type="textarea" name="name" value="" placeholder="What do you want to remember"> -->
+    <textarea ng-model="newText" class="note-input" name="name" placeholder="What do you want to remember" autofocus></textarea>
   </div>
-  <div>
-    <input ng-model="newAge" type="text" name="age" value="" placeholder="age">
-  </div>
-    
+
     <button ng-click="createNotes(newText)" type="button">Oh man use me!</button>
 
   <!-- Compiled and minified JavaScript -->
