@@ -9,6 +9,9 @@ var app = module.exports = express();
 app.use(bodyParser.json());
 app.use(cors());
 
+//make node serve our files
+app.use(express.static(__dirname + '/public'));
+
 var connectionString = "postgress://aleeexkang@localhost/personal_fullstack"; // "postgess://username/host/databaseName"
 var massiveInstance = massive.connectSync({connectionString : connectionString}); // who knows
 app.set("db", massiveInstance); // setting the "db" obj to equal th massive.connectSync
