@@ -20,6 +20,7 @@ app.set("db", massiveInstance); // setting the "db" obj to equal th massive.conn
 var itemCtrl = require('./itemCtrl.js');
 
 app.get('/items', itemCtrl.readItems);
+app.post('/items', itemCtrl.createItem);
 
 app.listen(4040, function() {
   console.log('lel');

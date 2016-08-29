@@ -14,6 +14,7 @@ angular
     $scope.createNotes = function(newText) {
       mainService.createNotes(newText).then(function(response) {
         $scope.data = response;
+        console.log("RESPONSE: ", response);
       });
     }
   })

@@ -3,7 +3,7 @@ angular
   .service('mainService', function($http) {
     //GET the data
     this.getNotes = function() {
-      return $http.get('/users')
+      return $http.get('/items')
       .then(function(response) {
         console.log(response.data);
       })
@@ -14,9 +14,9 @@ angular
       console.log(newText);
       return $http({
         method: 'POST',
-        url: '/users',
+        url: '/items',
         data: {
-          note: newText
+          text: newText
         }
       })
       .then(function(response) {

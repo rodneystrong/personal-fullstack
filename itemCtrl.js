@@ -20,13 +20,13 @@ module.exports = {
 
   createItem: function(req,res) {
     //massive.js call
-    console.log(req.body.name);
-    var bodyInput = req.body.name;
+    console.log(req.body.text);
+    var bodyInput = req.body.text;
 
     //this right here goes to the 'user' table, uses 'insert' which always requires
     //an object. so here name: is the column and bodyInput is what we get
     //from the user.
-    db.notes.insert({note: bodyInput}, function(error,response) {
+    db.notes.insert({note: req.body.text}, function(error,response) {
       if (error) {
         res.send(error);
       }
