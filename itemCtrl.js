@@ -26,7 +26,7 @@ module.exports = {
     //this right here goes to the 'user' table, uses 'insert' which always requires
     //an object. so here name: is the column and bodyInput is what we get
     //from the user.
-    db.notes.insert({name: bodyInput}, function(error,response) {
+    db.notes.insert({note: bodyInput}, function(error,response) {
       if (error) {
         res.send(error);
       }

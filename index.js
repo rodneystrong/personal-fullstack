@@ -12,6 +12,8 @@ app.set("db", massiveInstance); // setting the "db" obj to equal th massive.conn
 //exporting our app.
 var itemCtrl = require('./itemCtrl.js');
 
+app.get('/items', userCtrl.readUsers);
+
 app.listen(4040, function() {
   console.log('lel');
 });
