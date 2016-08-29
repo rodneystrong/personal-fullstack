@@ -1,0 +1,19 @@
+{
+  "name": "personal-fullstack",
+  "version": "1.0.0",
+  "description": "My personal full stack project for dev mountain",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rodneystrong/personal-fullstack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rodneystrong/personal-fullstack/issues"
+  },
+  "homepage": "https://github.com/rodneystrong/personal-fullstack#readme"
+}
