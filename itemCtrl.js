@@ -19,6 +19,7 @@ module.exports = {
     })
   },
 
+  //POST
   createItem: function(req,res) {
     //massive.js call
     console.log(req.body.text);
@@ -28,6 +29,23 @@ module.exports = {
     //an object. so here name: is the column and bodyInput is what we get
     //from the user.
     db.notes.insert({note: bodyInput}, function(error,response) {
+      if (error) {
+        res.send(error);
+      }
+      else {
+        res.send(response);
+      }
+    })
+  },
+
+  //DELETE
+  deleteItem: function(req,res) {
+    //massive.js calls
+    console.log(req.params.id);
+    var bodyItem = req.params.id;
+
+    db.users.destroy({id: bodyItem}, function(error,response) {
+      console.log(response);
       if (error) {
         res.send(error);
       }

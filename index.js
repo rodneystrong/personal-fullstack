@@ -21,6 +21,7 @@ var itemCtrl = require('./itemCtrl.js');
 
 app.get('/items', itemCtrl.readItems);
 app.post('/items', itemCtrl.createItem);
+app.delete('/items/:id', itemCtrl.deleteItem);
 
 app.listen(4040, function() {
   console.log('lel');

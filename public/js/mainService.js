@@ -24,4 +24,15 @@ angular
         return response.data;
       })
     }
+
+    //DELETE
+    this.deleteNote = function(id) {
+      return $http({
+        method: 'DELETE',
+        url: '/items' + id
+      })
+      .then(function(response) {
+        return response;
+      })
+    }
   })

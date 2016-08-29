@@ -18,4 +18,11 @@ angular
         console.log("RESPONSE: ", response);
       });
     }
+
+    //DELETE
+    $scope.deleteNote = function(id) {
+      mainService.deleteNote(id).then(function(response) {
+        $scope.getNotes();
+      })
+    }
   })
