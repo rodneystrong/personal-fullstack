@@ -9,6 +9,9 @@ var connectionString = "postgress://aleeexkang@localhost/personal_fullstack"; //
 var massiveInstance = massive.connectSync({connectionString : connectionString}); // who knows
 app.set("db", massiveInstance); // setting the "db" obj to equal th massive.connectSync
 
+//exporting our app.
+var itemCtrl = require('./itemCtrl.js');
+
 app.listen(3030, function() {
   console.log('lel');
 });
