@@ -5,7 +5,8 @@ angular
     this.getNotes = function() {
       return $http.get('/items')
       .then(function(response) {
-        console.log(response.data);
+        console.log(response);
+        return response.data;
       })
     }
 

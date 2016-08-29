@@ -6,6 +6,7 @@ angular
     //GET
     $scope.getNotes = function() {
       mainService.getNotes().then(function(response) {
+        console.log(response);
         $scope.data = response;
       })
     }

@@ -6,6 +6,7 @@ var db = app.get('db');
 
 
 module.exports = {
+  //READ
   readItems: function(req, res, next) {
     db.notes.find(function(error, response) {
       if(error) {
