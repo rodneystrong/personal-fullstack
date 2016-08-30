@@ -71,7 +71,7 @@ module.exports = {
   deleteItem: function(req,res) {
     //massive.js calls
     console.log('DELETE the ' + req.params.id);
-    console.log('DELETE the ' + req.params.id);
+
     var bodyItem = req.params.id;
     var bodyUser = req.params.id;
 
@@ -85,7 +85,7 @@ module.exports = {
       }
     })
     // Uncommment this later. might still need this
-    // db.people.destroy({id: bodyItem}, function(error,response) {
+    // db.people.destroy({id: bodyUser}, function(error,response) {
     //   console.log(response);
     //   if (error) {
     //     res.send(error);
