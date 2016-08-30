@@ -11,6 +11,29 @@
   <title>Full Stackin</title>
 </head>
 <body ng-controller="MainCtrl">
+
+
+  <!-- create a user -->
+  <div>
+    <input ng-model="newText" type="textarea" name="name" value="" placeholder="What do you want to remember" autofocus>
+    <!-- Textfield with Floating Label -->
+    <form action="#">
+      <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input ng-model="newText" class="mdl-textfield__input" type="email" id="sample3">
+        <label class="mdl-textfield__label" for="sample3">What do you want to remember</label>
+      </div>
+    </form>
+
+  </div>
+  <button ng-click="createUser(newEmail)" type="button">Yea you know you want to</button>
+
+  <!-- create a note -->
+  <div>
+    <!-- <input ng-model="newText" type="textarea" name="name" value="" placeholder="What do you want to remember"> -->
+    <textarea ng-model="newText" class="note-input" name="name" placeholder="What do you want to remember"></textarea>
+  </div>
+  <button ng-click="createNotes(newText)" type="button">Oh man use me!</button>
+
 {{whatevs}}
 
 <button ng-click="getNotes()" type="button" name="button" autofocus>CLICK ME MIKEEEY!!!</button>
@@ -31,15 +54,6 @@
       </div>
     </div>
   </div>
-
-  <!-- Create the parameter of 'newInfo' here that will interface with the
-       method in the angular service (in this case, 'createData').  -->
-  <div>
-    <!-- <input ng-model="newText" type="textarea" name="name" value="" placeholder="What do you want to remember"> -->
-    <textarea ng-model="newText" class="note-input" name="name" placeholder="What do you want to remember" autofocus></textarea>
-  </div>
-
-    <button ng-click="createNotes(newText)" type="button">Oh man use me!</button>
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
