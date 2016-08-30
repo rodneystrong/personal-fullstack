@@ -38,6 +38,22 @@ module.exports = {
     })
   },
 
+  //POST
+  createUser: function(req,res) {
+    //massive.js call
+    console.log(req.body.email);
+    var bodyEmail = req.body.email;
+
+    db.people.insert({email: bodyEmail}, function(error,response) {
+      if (error) {
+        res.send(error);
+      }
+      else {
+        res.send(response);
+      }
+    })
+  },
+
   //DELETE
   deleteItem: function(req,res) {
     //massive.js calls
