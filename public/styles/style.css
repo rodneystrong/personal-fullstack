@@ -1,7 +1,161 @@
 body {
   background-color: #fcfcfc;
-  margin: 0 auto;
-  width: 1100px;
+}
+
+.main-header {
+    font-size: 1.35em;
+    height: 80px;
+    position: absolute;
+    top: 0px;
+    transform: translateZ(0px);
+    width: 100%;
+    z-index: 4;
+    background: rgb(255, 255, 255);
+}
+
+.main-header h1 {
+    color: #616161;
+    display: inline-block;
+    font-size: 1.45em;
+    font-weight: 400;
+    margin-top: .7em;
+    text-align: right;
+    vertical-align: top;
+}
+
+.main-header h1 .by-gmail {
+    color: #9e9e9e;
+    display: block;
+    font-size: .5em;
+    font-weight: 500;
+    height: 1em;
+    margin-right: .1em;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+.main-header .menu-btn {
+    display: inline-block;
+    font-size: 1.3em;
+    height: 100%;
+    margin-left: 0.5em;
+    padding-left: 1.7em;
+    position: relative;
+}
+
+.main-header .title-btn {
+    width: auto;
+}
+
+.main-header .title-btn {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    vertical-align: top;
+}
+
+.main-header .logo {
+    display: inline-block;
+    margin-top: .65em;
+    margin-right: .1em;
+    width: 3.65em;
+}
+
+.main-header .inbox-dropdown {
+    margin-top: 12px;
+}
+
+.main-header .inbox-dropdown {
+    display: block;
+    float: right;
+    height: 56px;
+    margin-right: 5px;
+    margin-top: 23px;
+    position: relative;
+}
+
+.main-header .inbox-btn {
+    font-size: 16px;
+}
+
+.main-header .inbox-btn {
+    font-size: 12px;
+    padding: 20px;
+    min-width: 160px;
+}
+
+.main-header .inbox-btn {
+    background-color: #3776ea;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    padding: 19px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    min-width: 120px;
+    z-index: 2;
+}
+
+.main {
+  margin-top: 110px;
+}
+
+.main nav {
+    background: #fff;
+    border-top: 1px solid #f5f5f5;
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    display: block;
+    height: 46px;
+    left: 0;
+    position: absolute;
+    top: 64px;
+    width: 100%;
+    z-index: 3;
+}
+
+.main nav li {
+    display: inline-block;
+    margin-left: 3.3%;
+}
+
+.title {
+  background: url(../assets/top-header.jpg) no-repeat;
+  background-size: cover;
+  font-size: 3.75em;
+  padding: 80px 0;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+.title img {
+  margin-top: 40px;
+  width: 5em;
+}
+
+.logo-title {
+    color: #fff;
+    display: inline-block !important;
+    font-size: 2.1em;
+    font-weight: 300;
+    line-height: 1em;
+    margin-left: .1em;
+    margin-top: 6rem;
+    text-align: right;
+    vertical-align: top;
+}
+
+.by-gmail {
+    color: #9e9e9e;
+    display: block;
+    font-size: .38em;
+    line-height: 1.5em;
 }
 
 .note-input {
