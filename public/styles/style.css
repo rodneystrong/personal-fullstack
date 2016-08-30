@@ -1,0 +1,10 @@
+body {
+  background-color: #fcfcfc;
+  margin: 0 auto;
+  width: 1100px;
+}
+
+.note-input {
+  height: 3rem;
+  width: 50%;
+}
