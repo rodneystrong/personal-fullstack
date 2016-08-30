@@ -162,3 +162,7 @@ body {
   height: 3rem;
   width: 50%;
 }
+
+.item {
+  max-width: 800px;
+}
