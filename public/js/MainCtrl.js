@@ -3,7 +3,7 @@ angular
   .controller('MainCtrl', function($scope, mainService) {
     $scope.whatevs = 'lel';
 
-    //GET
+    //GET notes
     $scope.getNotes = function() {
       mainService.getNotes().then(function(response) {
         console.log(response);
@@ -11,15 +11,24 @@ angular
       })
     }
 
-    //POST
+    //GET users
+    $scope.ge = function() {
+      mainService.getNotes().then(function(response) {
+        console.log(response);
+        $scope.data = response;
+      })
+    }
+
+    //POST note
     $scope.createNotes = function(newText) {
       mainService.createNotes(newText).then(function(response) {
         $scope.data = response;
+        $scope.getNotes();
         console.log("RESPONSE: ", response);
       });
     }
 
-    //POST
+    //POST user
     $scope.createUser = function(newEmail) {
       mainService.createUser(newEmail).then(function(response) {
         $scope.data = response;
@@ -27,7 +36,7 @@ angular
       });
     }
 
-    //DELETE
+    //DELETE note
     $scope.deleteNote = function(id) {
       mainService.deleteNote(id).then(function(response) {
         $scope.getNotes();

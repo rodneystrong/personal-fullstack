@@ -1,7 +1,16 @@
 angular
   .module('fullStack')
   .service('mainService', function($http) {
-    //GET the data
+    //GET the notes
+    this.getNotes = function() {
+      return $http.get('/items')
+      .then(function(response) {
+        console.log(response);
+        return response.data;
+      })
+    }
+
+    //GET the users
     this.getNotes = function() {
       return $http.get('/items')
       .then(function(response) {
@@ -30,7 +39,7 @@ angular
       console.log(newEmail);
       return $http({
         method: 'POST',
-        url: '/items',
+        url: '/users',
         data: {
           email: newEmail
         }
