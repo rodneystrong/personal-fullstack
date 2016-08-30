@@ -19,3 +19,9 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-applica
 
 Install PostGreSQL on Linode
 https://www.linode.com/docs/databases/postgresql/use-postgresql-relational-databases-on-ubuntu-16-04
+
+CSS Curtain effect
+https://css-tricks.com/creating-css-sliding-door-effect/
+
+Animate CSS
+https://daneden.github.io/animate.css/
