@@ -85,7 +85,6 @@ body {
 }
 
 .main-header .inbox-btn {
-    background-color: #3776ea;
     color: #fff;
     display: block;
     font-size: 16px;
@@ -163,6 +162,10 @@ body {
   width: 50%;
 }
 
-.item {
-  max-width: 800px;
+.mdl-grid.mdl-grid--no-spacing {
+  margin-bottom: 20px;
+}
+
+.mdl-grid--no-spacing>.mdl-cell--9-col-desktop.mdl-cell--9-col-desktop {
+  width: 100%;
 }
