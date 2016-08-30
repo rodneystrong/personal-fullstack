@@ -35,8 +35,8 @@ module.exports = {
   //POST
   createItem: function(req,res) {
     //massive.js call
-    console.log('itemCtrl POST the notes ' + bodyInput);
     var bodyInput = req.body.text;
+    console.log('itemCtrl POST the notes ' + bodyInput);
 
     //this right here goes to the 'user' table, uses 'insert' which always requires
     //an object. so here name: is the column and bodyInput is what we get
@@ -54,8 +54,8 @@ module.exports = {
   //POST
   createUser: function(req,res) {
     //massive.js call
-    console.log('itemCtrl POST the peeps ' + bodyEmail);
     var bodyEmail = req.body.email;
+    console.log('itemCtrl POST the peeps ' + bodyEmail);
 
     db.people.insert({email: bodyEmail}, function(error,response) {
       if (error) {
@@ -70,10 +70,10 @@ module.exports = {
   //DELETE
   deleteItem: function(req,res) {
     //massive.js calls
-    console.log('DELETE the ' + req.params.id);
 
     var bodyItem = req.params.id;
     var bodyUser = req.params.id;
+    console.log('DELETE the ' + req.params.id);
 
     db.notes.destroy({id: bodyItem}, function(error,response) {
       console.log(response);

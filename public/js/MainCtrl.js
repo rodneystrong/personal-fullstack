@@ -3,6 +3,10 @@ angular
   .controller('MainCtrl', function($scope, mainService) {
     $scope.whatevs = 'lel';
 
+    var date = new Date();
+    var n = date.toDateString();
+    $scope.date = n;
+
     //GET notes
     $scope.getNotes = function() {
       mainService.getNotes().then(function(response) {
