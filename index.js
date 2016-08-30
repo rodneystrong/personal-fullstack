@@ -25,5 +25,5 @@ app.post('/users', itemCtrl.createUser);
 app.delete('/items/:id', itemCtrl.deleteItem);
 
 app.listen(4040, function() {
-  console.log('lel');
+  console.log('app.listen 4040');
 });

@@ -12,8 +12,8 @@ angular
     }
 
     //GET users
-    $scope.ge = function() {
-      mainService.getNotes().then(function(response) {
+    $scope.getUsers = function() {
+      mainService.getUsers().then(function(response) {
         console.log(response);
         $scope.data = response;
       })

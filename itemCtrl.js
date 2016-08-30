@@ -6,14 +6,27 @@ var db = app.get('db');
 
 
 module.exports = {
-  //READ
+  //READ notes
   readItems: function(req, res, next) {
     db.notes.find(function(error, response) {
       if(error) {
         res.json(error);
       }
       else {
-        console.log('wooord');
+        console.log('itemCtrl get the notes');
+        res.json(response);
+      }
+    })
+  },
+
+  //READ users
+  readItems: function(req, res, next) {
+    db.people.find(function(error, response) {
+      if(error) {
+        res.json(error);
+      }
+      else {
+        console.log('itemCtrl get the peeps');
         res.json(response);
       }
     })
@@ -22,7 +35,7 @@ module.exports = {
   //POST
   createItem: function(req,res) {
     //massive.js call
-    console.log(req.body.text);
+    console.log('itemCtrl POST the notes');
     var bodyInput = req.body.text;
 
     //this right here goes to the 'user' table, uses 'insert' which always requires
@@ -41,7 +54,7 @@ module.exports = {
   //POST
   createUser: function(req,res) {
     //massive.js call
-    console.log(req.body.email);
+    console.log('itemCtrl POST the peeps');
     var bodyEmail = req.body.email;
 
     db.people.insert({email: bodyEmail}, function(error,response) {
@@ -57,7 +70,7 @@ module.exports = {
   //DELETE
   deleteItem: function(req,res) {
     //massive.js calls
-    console.log(req.params.id);
+    console.log('DELETE the ' + req.params.id);
     var bodyItem = req.params.id;
 
     db.notes.destroy({id: bodyItem}, function(error,response) {

@@ -11,11 +11,11 @@ angular
     }
 
     //GET the users
-    this.getNotes = function() {
-      return $http.get('/items')
+    this.getUsers = function() {
+      return $http.get('/users')
       .then(function(response) {
         console.log(response);
-        return response.data;
+        return response.data.email;
       })
     }
 
