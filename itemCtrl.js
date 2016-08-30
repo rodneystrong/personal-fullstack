@@ -44,7 +44,7 @@ module.exports = {
     console.log(req.params.id);
     var bodyItem = req.params.id;
 
-    db.users.destroy({id: bodyItem}, function(error,response) {
+    db.notes.destroy({id: bodyItem}, function(error,response) {
       console.log(response);
       if (error) {
         res.send(error);

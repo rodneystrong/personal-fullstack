@@ -19,6 +19,14 @@ angular
       });
     }
 
+    //POST
+    $scope.createUser = function(newEmail) {
+      mainService.createUser(newEmail).then(function(response) {
+        $scope.data = response;
+        console.log("RESPONSE: ", response);
+      });
+    }
+
     //DELETE
     $scope.deleteNote = function(id) {
       mainService.deleteNote(id).then(function(response) {

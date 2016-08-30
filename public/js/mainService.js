@@ -25,11 +25,27 @@ angular
       })
     }
 
+    //POST
+    this.createUser = function(newEmail) {
+      console.log(newEmail);
+      return $http({
+        method: 'POST',
+        url: '/items',
+        data: {
+          email: newEmail
+        }
+      })
+      .then(function(response) {
+        return response.data;
+      })
+    }
+
     //DELETE
     this.deleteNote = function(id) {
+      console.log(id);
       return $http({
         method: 'DELETE',
-        url: '/items' + id
+        url: ('/items/' + id)
       })
       .then(function(response) {
         return response;
