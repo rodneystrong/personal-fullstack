@@ -20,7 +20,7 @@ module.exports = {
   },
 
   //READ users
-  readItems: function(req, res, next) {
+  readUsers: function(req, res, next) {
     db.people.find(function(error, response) {
       if(error) {
         res.json(error);
@@ -35,7 +35,7 @@ module.exports = {
   //POST
   createItem: function(req,res) {
     //massive.js call
-    console.log('itemCtrl POST the notes');
+    console.log('itemCtrl POST the notes ' + bodyInput);
     var bodyInput = req.body.text;
 
     //this right here goes to the 'user' table, uses 'insert' which always requires
@@ -54,7 +54,7 @@ module.exports = {
   //POST
   createUser: function(req,res) {
     //massive.js call
-    console.log('itemCtrl POST the peeps');
+    console.log('itemCtrl POST the peeps ' + bodyEmail);
     var bodyEmail = req.body.email;
 
     db.people.insert({email: bodyEmail}, function(error,response) {
@@ -71,7 +71,9 @@ module.exports = {
   deleteItem: function(req,res) {
     //massive.js calls
     console.log('DELETE the ' + req.params.id);
+    console.log('DELETE the ' + req.params.id);
     var bodyItem = req.params.id;
+    var bodyUser = req.params.id;
 
     db.notes.destroy({id: bodyItem}, function(error,response) {
       console.log(response);
@@ -82,5 +84,15 @@ module.exports = {
         res.send(response);
       }
     })
+    // Uncommment this later. might still need this
+    // db.people.destroy({id: bodyItem}, function(error,response) {
+    //   console.log(response);
+    //   if (error) {
+    //     res.send(error);
+    //   }
+    //   else {
+    //     res.send(response);
+    //   }
+    // })
   }
 }

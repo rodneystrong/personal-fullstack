@@ -49,12 +49,24 @@ angular
       })
     }
 
-    //DELETE
+    //DELETE note
     this.deleteNote = function(id) {
       console.log(id);
       return $http({
         method: 'DELETE',
         url: ('/items/' + id)
+      })
+      .then(function(response) {
+        return response;
+      })
+    }
+
+    //DELETE user
+    this.deleteUser = function(id) {
+      console.log(id);
+      return $http({
+        method: 'DELETE',
+        url: ('/users/' + id)
       })
       .then(function(response) {
         return response;

@@ -42,4 +42,11 @@ angular
         $scope.getNotes();
       })
     }
+
+    //DELETE user
+    $scope.deleteUser = function(id) {
+      mainService.deleteUser(id).then(function(response) {
+        $scope.getNotes();
+      })
+    }
   })
