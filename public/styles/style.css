@@ -170,10 +170,24 @@ body {
   width: 100%;
 }
 
+.item {
+  position: relative;
+  left: 90%;
+}
+
 footer.page-footer {
   margin-top: 90px;
 }
 
 footer p {
   color: #fff;
+}
+
+.testi {
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.testi + p {
+  font-style: italic;
 }
